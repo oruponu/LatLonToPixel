@@ -24,7 +24,7 @@ namespace LatLonToPixel
         {
             var point = LatLonToPixel(35.7, 139.7);
 
-            var bitmap = Properties.Resources.MapImage;
+            var bitmap = new Bitmap(Properties.Resources.MapImage, ImgWidth, ImgHeight);
             var graphics = Graphics.FromImage(bitmap);
             var pen = new Pen(Color.Red, 2);
             graphics.DrawLine(pen, point[0] - 10, point[1] - 10, point[0] + 10, point[1] + 10);
